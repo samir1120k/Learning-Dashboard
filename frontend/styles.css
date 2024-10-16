@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    height: 60px; /* Set a fixed height for the navbar */
+  }
+  
+  .logo img {
+    width: 40px;
+    height: 40px; /* Make the logo square and consistent with navbar height */
+    object-fit: contain; /* Ensure the logo fits within the dimensions */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #7a49d6;
+    left: 50%;
+    bottom: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .nav-links a:hover {
+    color: #7a49d6;
+  }
+  
+  .nav-links .active::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .bell-icon {
+    font-size: 20px;
+    position: relative;
+  }
+  
+  .notification-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #7a49d6;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -5px;
+  }
+  
+  .profile-pic {
+    width: 40px; /* Reduce the size */
+    height: 40px; /* Reduce the size */
+    border-radius: 50%;
+    border: 2px solid #7a49d6;
+    object-fit: contain;
+  }
+  
+  .main-content {
+    display: flex;
+    gap: 20px;
+    height: calc(100vh - 60px); /* Adjust based on your navbar height */
+    padding: 20px;
+  }
+  
+  .column {
+    flex: 1;
+    min-width: 0; /* This allows the column to shrink below its content size */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .profile-column {
+    background-color: #ffffff;
+  }
+  
+  .profile-card {
+    text-align: center;
+  }
+  
+  .profile-header {
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #8a2be2;
+  }
+  
+  .profile-header h2 {
+    margin: 10px 0 5px;
+    color: #333;
+  }
+  
+  .profile-header p {
+    color: #666;
+    margin: 0;
+  }
+  
+  .progress-info {
+    color: #8a2be2;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .stat-item h3 {
+    color: #333;
+    margin: 0;
+  }
+  
+  .stat-item p {
+    color: #666;
+    margin: 5px 0 0;
+    font-size: 0.9em;
+  }
+  
+  .new-skills-card {
+    background-color: #f0f0ff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .skills-icon {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+  }
+  
+  .new-skills-card h3 {
+    color: #333;
+    margin: 0 0 10px;
+  }
+  
+  .new-skills-card p {
+    color: #666;
+    margin: 0 0 15px;
+  }
+  
+  .view-courses-btn {
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .view-courses-btn:hover {
+    background-color: #7a1dd1;
+  }
+
+/* Courses Column Styles */
+.courses-column {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden; /* This hides the scrollbar when not needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.courses-card {
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* This enables vertical scrolling */
+  flex-grow: 1;
+}
+
+.courses-card h2 {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 20px 0;
+  margin: 0 0 20px 0;
+  z-index: 1;
+}
+
+.course-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.course-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.course-info {
+  flex-grow: 1;
+}
+
+.course-info h3 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.course-progress {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #8e44ad;
+  border-radius: 3px;
+}
+
+.more-options {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+}
+
+.new-lesson {
+  background-color: #f0f0ff;
+  justify-content: center;
+  padding: 15px;
+}
+
+.new-lesson-badge {
+  color: #5b5bff;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Scrollbar Styles (Optional) */
+.courses-card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.courses-card::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.courses-card::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.courses-card::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Calendar Column Styles */
+.calendar-column {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.calendar-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.calendar-days {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: calc(100% / 7 - 10px); /* Adjust the 10px based on desired gap */
+  aspect-ratio: 2 / 3; /* This creates a 1.5 height-to-width ratio */
+  border-radius: 20%; /* 20% border radius */
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.day span {
+  font-size: 12px;
+  font-weight: normal;
+  color: #888;
+  margin-top: 4px;
+}
+
+.day.selected {
+  background-color: #8e44ad;
+  color: white;
+}
+
+.day.selected span {
+  color: #f0f0f0;
+}
+
+.events-list {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.event {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.event-time {
+  font-size: 14px;
+  color: #888;
+  min-width: 100px;
+}
+
+.event-details {
+  flex-grow: 1;
+}
+
+.event-details h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.event-details p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.live-badge {
+  background-color: #ff4757;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.more-options {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+
+/* Scrollbar Styles (Optional) */
+.events-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.events-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.events-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.events-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

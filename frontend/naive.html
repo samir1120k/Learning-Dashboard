@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="programmer ❣️❣️.jpeg" alt="Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Workshops</a></li>
+      <li><a href="#">Groups</a></li>
+      <li><a href="#">Certificates</a></li>
+    </ul>
+    <div class="icons">
+      <div class="notification">
+        <i class="bell-icon">🔔</i>
+        <span class="notification-dot"></span>
+      </div>
+      <div class="profile">
+        <img src="profile bgremove.png" alt="Profile Picture" class="profile-pic">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- First Column - Profile Page -->
+    <div class="column profile-column">
+      <div class="profile-card">
+        <div class="profile-header">
+          <img src="profile bgremove.png" alt="Profile Picture" class="profile-pic">
+          <h2>Jane Doe</h2>
+          <p>Intermediate level</p>
+        </div>
+        <div class="progress-info">
+          <p>Only 5 lessons to become Pro!</p>
+        </div>
+        <div class="stats">
+          <div class="stat-item">
+            <h3>10</h3>
+            <p>Courses completed</p>
+          </div>
+          <div class="stat-item">
+            <h3>8/10</h3>
+            <p>Average score</p>
+          </div>
+          <div class="stat-item">
+            <h3>3</h3>
+            <p>Certificates obtained</p>
+          </div>
+        </div>
+        <div class="new-skills-card">
+          <img src="https://as2.ftcdn.net/v2/jpg/05/85/88/41/1000_F_585884120_mS3HyLV6LjFhxIAZmClwoKkFNFclnGtJ.jpg" alt="Skills Icon" class="skills-icon">
+          <h3>Looking for new skills?</h3>
+          <p>Explore the offering of advanced courses, designed to elevate your skills!</p>
+          <button class="view-courses-btn">View courses</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Second Column - Courses -->
+    <div class="column courses-column">
+      <div class="courses-card">
+        <h2>Courses</h2>
+        <ul class="course-list">
+          <li class="course-item">
+            <img src="cc.png" alt="Figma fundamentals icon" class="course-icon">
+            <div class="course-info">
+              <h3>Figma fundamentals: first step into UI/UX Design</h3>
+              <div class="course-progress">
+                <span>5/10 lessons</span>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 50%;"></div>
+                </div>
+                <span>50%</span>
+              </div>
+            </div>
+            <button class="more-options">...</button>
+          </li>
+          <li class="course-item">
+            <img src="cc.png" alt="Creative collaboration icon" class="course-icon">
+            <div class="course-info">
+              <h3>Creative collaboration: teamwork in Figma</h3>
+              <div class="course-progress">
+                <span>5/10 lessons</span>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 50%;"></div>
+                </div>
+                <span>50%</span>
+              </div>
+            </div>
+            <button class="more-options">...</button>
+          </li>
+          <!-- <li class="course-item new-lesson">
+            <span class="new-lesson-badge">New lesson available</span>
+          </li> -->
+          <li class="course-item">
+            <img src="cc.png" alt="Interactive prototyping icon" class="course-icon">
+            <div class="course-info">
+              <h3>Interactive prototyping and animations</h3>
+              <div class="course-progress">
+                <span>5/10 lessons</span>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 50%;"></div>
+                </div>
+                <span>50%</span>
+              </div>
+            </div>
+            <button class="more-options">...</button>
+          </li>
+          <li class="course-item">
+            <img src="cc.png" alt="Figma for mobile icon" class="course-icon">
+            <div class="course-info">
+              <h3>Figma for mobile: design engaging apps</h3>
+              <div class="course-progress">
+                <span>5/10 lessons</span>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 50%;"></div>
+                </div>
+                <span>50%</span>
+              </div>
+            </div>
+            <button class="more-options">...</button>
+          </li>
+          <li class="course-item">
+            <img src="cc.png" alt="Figma to front-end icon" class="course-icon">
+            <div class="course-info">
+              <h3>From Figma to front-end</h3>
+              <div class="course-progress">
+                <span>5/10 lessons</span>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 50%;"></div>
+                </div>
+                <span>50%</span>
+              </div>
+            </div>
+            <button class="more-options">...</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Third Column - Calendar -->
+    <div class="column calendar-column">
+      <div class="calendar-card">
+        <div class="calendar-header">
+          <button class="nav-btn prev">&lt;</button>
+          <h2>March 2024</h2>
+          <button class="nav-btn next">&gt;</button>
+        </div>
+        <div class="calendar-days">
+          <div class="day">25<span>mon</span></div>
+          <div class="day selected">26<span>tue</span></div>
+          <div class="day">27<span>wed</span></div>
+          <div class="day">28<span>thu</span></div>
+          <div class="day">29<span>fri</span></div>
+          <div class="day">30<span>sat</span></div>
+          <div class="day">31<span>sun</span></div>
+        </div>
+        <div class="events-list">
+          <div class="event">
+            <div class="event-time">10:00 - 10:30</div>
+            <div class="event-details">
+              <h3>Works review</h3>
+              <p>Figma fundamentals: first step into UI/UX Design</p>
+            </div>
+            <button class="more-options">...</button>
+          </div>
+          <div class="event">
+            <div class="event-time">11:00 - 12:30</div>
+            <div class="event-details">
+              <h3>Notes and messages</h3>
+              <p>Creative collaboration: teamwork in Figma</p>
+              <span class="live-badge">Live</span>
+            </div>
+            <button class="more-options">...</button>
+          </div>
+          <div class="event">
+            <div class="event-time">15:00 - 16:45</div>
+            <div class="event-details">
+              <h3>Teamwork</h3>
+              <p>Figma fundamentals: first step into UI/UX Design</p>
+            </div>
+            <button class="more-options">...</button>
+          </div>
+          <div class="event">
+            <div class="event-time">17:00 - 17:30</div>
+            <div class="event-details">
+              <h3>Tutor</h3>
+            </div>
+            <button class="more-options">...</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
